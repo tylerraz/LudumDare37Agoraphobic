@@ -8,17 +8,20 @@ using UnityEngine.SceneManagement;
 
 public class DataController : MonoBehaviour {
 
-	
     
-    // Use this for initialization
+    public int genderChoice;
+
+
+    
 	void Start () {
 
+        genderChoice = 0;
         DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("MainMenu");
 
 	}
 	
-
+    
 
 
 
