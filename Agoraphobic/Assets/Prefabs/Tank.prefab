@@ -22,7 +22,9 @@ GameObject:
   - 212: {fileID: 212000010637911068}
   - 61: {fileID: 61000010691903912}
   - 114: {fileID: 114000013420125024}
-  m_Layer: 0
+  - 114: {fileID: 114000011399406008}
+  - 50: {fileID: 50000013688284698}
+  m_Layer: 11
   m_Name: Tank
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -36,12 +38,29 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010858056114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &50000013688284698
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010858056114}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61000010691903912
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -56,6 +75,27 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.4833333, y: 1.1133333}
+--- !u!114 &114000011399406008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010858056114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48a563c8787af047a3ab6fc68f37e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAI: 0
+  myRigid: {fileID: 0}
+  playerController: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  speed: 2
+  Xmapbounds: {x: -9, y: 6}
+  Ymapbounds: {x: -4, y: 4}
+  targetPosition: {x: 0, y: 0, z: 0}
+  moveVector: {x: 0, y: 0, z: 0}
+  moving: 0
 --- !u!114 &114000013420125024
 MonoBehaviour:
   m_ObjectHideFlags: 1

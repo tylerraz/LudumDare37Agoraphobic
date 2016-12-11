@@ -5,9 +5,7 @@ using UnityEngine.UI;
 public class VolumeSetter : MonoBehaviour {
 
     public GameObject settingPanel;
-    public AudioSource audioSource;
-
-
+    
 
 	// Use this for initialization
 	void Start () {

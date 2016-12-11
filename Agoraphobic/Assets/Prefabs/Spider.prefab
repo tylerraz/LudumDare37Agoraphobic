@@ -23,9 +23,11 @@ GameObject:
   - 58: {fileID: 58000010675402058}
   - 114: {fileID: 114000012334443102}
   - 95: {fileID: 95000012565797974}
-  m_Layer: 0
+  - 50: {fileID: 50000010891980546}
+  - 114: {fileID: 114000011330666054}
+  m_Layer: 11
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,6 +45,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &50000010891980546
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010918694954}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58000010675402058
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -74,6 +93,27 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000011330666054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010918694954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48a563c8787af047a3ab6fc68f37e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAI: 1
+  myRigid: {fileID: 0}
+  playerController: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  speed: 2
+  Xmapbounds: {x: -9, y: 6}
+  Ymapbounds: {x: -4, y: 4}
+  targetPosition: {x: 0, y: 0, z: 0}
+  moveVector: {x: 0, y: 0, z: 0}
+  moving: 0
 --- !u!114 &114000012334443102
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -8,13 +8,13 @@ public class WaveController : MonoBehaviour {
     public WaveData[] GameWaves;
 
     public int waveNumber;
-    public int enemyNumber;
+    public int spawnNumber;
     public float timer;
 
     private void Start()
     {
         waveNumber = 0;
-        enemyNumber = 0;
+        spawnNumber = 0;
         timer = 0;
 
         StartCoroutine("SpawnWave");
@@ -37,26 +37,26 @@ public class WaveController : MonoBehaviour {
 
             float relativeTime = timer;
 
-            while(enemyNumber<currentWave.SpawnList.Length)
+            while(spawnNumber<currentWave.SpawnList.Length)
             {
-                SpawnEvent nextEnemy= currentWave.SpawnList[enemyNumber];
+                SpawnEvent nextSpawn= currentWave.SpawnList[spawnNumber];
 
-                float resumeLoopTime = relativeTime + nextEnemy.time - timer;
+                float resumeLoopTime = relativeTime + nextSpawn.time - timer;
 
                 yield return new WaitForSeconds(resumeLoopTime);
 
                 //after time is up, create the new enemy
-                Vector3 entrance = new Vector3(nextEnemy.entrancePoint.position.x, nextEnemy.entrancePoint.position.y, 0.0f);
+                Vector3 entrance = new Vector3(nextSpawn.entrancePoint.position.x, nextSpawn.entrancePoint.position.y, 0.0f);
 
-                GameObject Enemy = Instantiate(nextEnemy.SpawnItem, entrance, Quaternion.identity) as GameObject;
+                GameObject Enemy = Instantiate(nextSpawn.SpawnItem, entrance, Quaternion.identity) as GameObject;
 
-                enemyNumber++;
+                spawnNumber++;
                 
             }
             //WaveFinished, Get Ready for Next Wave
 
             waveNumber++;
-            enemyNumber = 0;
+            spawnNumber = 0;
             yield return new WaitForSeconds(1.0f);
         }
 

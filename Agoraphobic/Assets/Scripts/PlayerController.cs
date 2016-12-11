@@ -62,6 +62,9 @@ public class PlayerController : MonoBehaviour {
         
 
         chosen = characterChoices[gender];
+        if (gender == 2) {
+            character.GetComponent<AudioSource>().Play();
+        }
 
         character.GetComponent<SpriteRenderer>().sprite = chosen.gameSprite;
 
@@ -70,16 +73,17 @@ public class PlayerController : MonoBehaviour {
         characterSpeed = chosen.moveSpeed;
         character.GetComponent<PlayerHealth>().maxHealth = chosen.maxHealth;
 
+
+
         //fire rate
         fireRate = chosen.fireRate;
         firingDelay = baseFireRate / fireRate;
         firingTimer = 0.0f; 
 
-
-
-
+                
         rigid = character.GetComponent<Rigidbody2D>();
-       
+        
+        
 
 
     }
