@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afae25557c3b1841854dded4550672f, type: 3}
+  m_Name: FirstWave
+  m_EditorClassIdentifier: 
+  IntroText: I just want to stay inside.
+  CompletionText: I have everything I need here.
+  FailText: I'd rather starve.
+  SpawnList:
+  - time: 3
+    SpawnItem: {fileID: 1000010858056114, guid: 4775432f6c797d64a98efe5f520f8bf8,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: c0f8fbd2aea9e004d9727bce7e17dd1f, type: 2}
+    travelPath:
+    - {x: 0, y: 0}
+  - time: 12
+    SpawnItem: {fileID: 1000010858056114, guid: 4775432f6c797d64a98efe5f520f8bf8,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 1dca2821deb16d04db283d4aa5977b84, type: 2}
+    travelPath: []
