@@ -53,8 +53,10 @@ public class WaveController : MonoBehaviour {
                 enemyNumber++;
                 
             }
+            //WaveFinished, Get Ready for Next Wave
 
             waveNumber++;
+            enemyNumber = 0;
             yield return new WaitForSeconds(1.0f);
         }
 
