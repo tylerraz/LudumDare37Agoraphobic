@@ -19,7 +19,7 @@ public class MissileController : MonoBehaviour {
 
         if(timer>lifetime)
         {
-            Destroy(gameObject);
+            Die();
 
         }
 
@@ -27,6 +27,11 @@ public class MissileController : MonoBehaviour {
 
 	
 	}
+
+    public void Die() {
+
+        Destroy(gameObject, .25f);
+    }
 
 
 

@@ -5,31 +5,88 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 
+    //set in inspector
     public GameObject character;
-    private Rigidbody2D rigid;
+    public CharacterBaseData[] characterChoices;
 
-    //public CharacterMover characterMover;
+
+    [SerializeField]
+    private DataController gameDataController;
+    private CharacterBaseData chosen;
+    
+
+    //set by CharacterBaseData
     public GameObject projectilePrefab;
+    public float characterSpeed;
+    public float fireRate;
 
+
+
+    //for shooting alignment
     public float shotForce;
     public float degrees;
-    public float characterSpeed;
-
     public Vector3 aim;
     public Vector3 shoot;
 
+    //shooting variables
+    public float firingTimer; //allows fire once under zero
+    public float firingDelay; //timer start value
+    public float baseFireRate;
+
+    //for movement
     public Vector2 movement;
+    private Rigidbody2D rigid;
+
     
     
-    // Use this for initialization
-	void Start () {
+    
+    
+    
+    
+    // Setup Character from DataController, and BaseData
+    void Start () {
+
+        gameDataController = FindObjectOfType<DataController>();
+
+        int gender = 0; //testing
+        if (gameDataController == null) {
+            Debug.Log("No Data Controller Present");
+            
+            
+                        
+            //use for build
+            //Application.Quit();
+            
+        }
+        else { gender = gameDataController.genderChoice; } //desired behavior, gender was selected from main menu
+        
+
+        chosen = characterChoices[gender];
+
+        character.GetComponent<SpriteRenderer>().sprite = chosen.gameSprite;
+
+        projectilePrefab = chosen.projectile;
+
+        characterSpeed = chosen.moveSpeed;
+        character.GetComponent<PlayerHealth>().maxHealth = chosen.maxHealth;
+
+        //fire rate
+        fireRate = chosen.fireRate;
+        firingDelay = baseFireRate / fireRate;
+        firingTimer = 0.0f; 
+
+
 
 
         rigid = character.GetComponent<Rigidbody2D>();
-       //characterMover = character.GetComponent<CharacterMover>();
+       
 
 
     }
+
+
+
+
 	
 	
     
@@ -37,22 +94,28 @@ public class PlayerController : MonoBehaviour {
     // Gets Input
 	void Update () {
 
-        movement.x = 0;
-        movement.y = 0;
 
-        if (Input.GetMouseButtonDown(0)) {
-           aim = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        //fire code
+        firingTimer -= Time.deltaTime;
+
+        if (Input.GetMouseButtonDown(0) &&firingTimer <0.0f) {
+
+            firingTimer = firingDelay;
+            aim = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             aim.z = 0;
             fireProjectile(aim);
           
         }
 
+        //movement code; first reset movement
+        movement.x = 0;
+        movement.y = 0;
+
         //sets input vector for FixedUpdate
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
-
-
-
+        
     }
 
 
