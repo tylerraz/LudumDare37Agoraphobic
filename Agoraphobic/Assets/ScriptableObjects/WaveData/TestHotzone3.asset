@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afae25557c3b1841854dded4550672f, type: 3}
+  m_Name: TestHotzone3
+  m_EditorClassIdentifier: 
+  IntroText: Boo
+  CompletionText: AHAHAA
+  FailText: Gurgle
+  myObjective: 3
+  SpawnList:
+  - time: 2
+    SpawnItem: {fileID: 1000012473362540, guid: 9c4d1b168f4554a49ab27ba3ed36841e,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 6e722b9d2238f734ea56e5f351015380, type: 2}
+  - time: 6
+    SpawnItem: {fileID: 1000010918694954, guid: fd25eadff57ca0947ae7e2575acad7c8,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: c0f8fbd2aea9e004d9727bce7e17dd1f, type: 2}
+  - time: 7
+    SpawnItem: {fileID: 1000012883391602, guid: 9a6b4aca6bfad1844a58d1f5d50500f9,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 1dca2821deb16d04db283d4aa5977b84, type: 2}

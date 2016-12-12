@@ -24,6 +24,7 @@ GameObject:
   - 58: {fileID: 58000011310343828}
   - 50: {fileID: 50000010447731148}
   - 114: {fileID: 114000013304801044}
+  - 114: {fileID: 114000013901480482}
   m_Layer: 11
   m_Name: Devil Baby
   m_TagString: Enemy
@@ -111,6 +112,24 @@ MonoBehaviour:
   currentHealth: 0
   damageReduction: 0
   meleeDamage: 1
+--- !u!114 &114000013901480482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012473362540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd74ad10a166014fa6718b5d145cc4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPlayer: {fileID: 0}
+  EnemyProjectile: {fileID: 1000011271682136, guid: bbd36335f879ece40a031b9a850d3af6,
+    type: 2}
+  myTarget: {x: 0, y: 0, z: 0}
+  fireDelaySeconds: 1.25
+  fireTimer: 0
+  shotForce: 75
 --- !u!212 &212000010391878986
 SpriteRenderer:
   m_ObjectHideFlags: 1

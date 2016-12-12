@@ -14,6 +14,7 @@ MonoBehaviour:
   IntroText: I have everything I need in here.
   CompletionText: Yes, everything.
   FailText: Except meaning.
+  myObjective: 1
   SpawnList:
   - time: 1
     SpawnItem: {fileID: 1000010348505014, guid: 06638bc07a8f35940926bcd60cc6bb69,

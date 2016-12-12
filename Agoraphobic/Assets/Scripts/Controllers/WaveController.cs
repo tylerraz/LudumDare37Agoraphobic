@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class WaveController : MonoBehaviour {
 
 
@@ -32,11 +33,13 @@ public class WaveController : MonoBehaviour {
 
     public IEnumerator SpawnWave() {
 
+        yield return new WaitForSeconds(1.0f); //waits for everything to initialize. Curse coroutines called by start
         while(waveNumber<GameWaves.Length)
         {
             WaveData currentWave = GameWaves[waveNumber];
 
             float relativeTime = timer;
+            SetUpWaveObjective((int)currentWave.myObjective);
 
             while(spawnNumber<currentWave.SpawnList.Length)
             {
@@ -75,7 +78,13 @@ public class WaveController : MonoBehaviour {
 
 
 
+    public void SetUpWaveObjective(int i) {
 
+        myPlayer.NewWave(i);
+        
+        
+
+    }
 
 
 }

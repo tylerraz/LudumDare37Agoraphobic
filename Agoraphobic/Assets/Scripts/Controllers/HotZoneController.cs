@@ -6,7 +6,7 @@ public class HotZoneController : MonoBehaviour {
 
     public PlayerController myPlayer;
     public WaveController myWave;
-    public GameObject[] Hotzones;
+    public SingleHotzone[] Hotzones;
 
     public float hotZoneMaxhealth;
     public float hotZoneHealPoints;
@@ -16,9 +16,9 @@ public class HotZoneController : MonoBehaviour {
 
     private void Start()
     {
-        foreach (GameObject zone in Hotzones)
+        foreach (SingleHotzone zone in Hotzones)
         {
-            zone.GetComponent<SingleHotzone>().zoneHealth =hotZoneMaxhealth;
+            zone.zoneHealth =hotZoneMaxhealth;
         }
         DeactivateHotzones();
     }
@@ -26,13 +26,15 @@ public class HotZoneController : MonoBehaviour {
 
     public void ActivateHotzone(int zone)
     {
-        if(zone<0 || zone>= Hotzones.Length){
+        Debug.Log("HotzoneActivated" + zone.ToString());
+
+        if (zone<0 || zone>= Hotzones.Length){
             DeactivateHotzones();
             return;
 
         }
 
-        Hotzones[zone].SetActive(true);
+        Hotzones[zone].gameObject.SetActive(true);
         myPlayer.hotzone = Hotzones[zone];
 
         
@@ -40,9 +42,10 @@ public class HotZoneController : MonoBehaviour {
 
     public void DeactivateHotzones() {
 
-        foreach (GameObject zone in Hotzones)
+        Debug.Log("HotZonesDeactivated");
+        foreach (SingleHotzone zone in Hotzones)
         {
-            zone.SetActive(false);
+            zone.gameObject.SetActive(false);
         }
 
         myPlayer.hotzone = null;

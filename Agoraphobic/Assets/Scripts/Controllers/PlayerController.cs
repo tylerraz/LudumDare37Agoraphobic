@@ -38,7 +38,8 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D rigid;
 
     //Game systems linkage
-    public GameObject hotzone;
+    public HotZoneController hotzoneRoot;
+    public SingleHotzone hotzone;
     public bool hotzoneAlive;
     
     
@@ -164,6 +165,22 @@ public class PlayerController : MonoBehaviour {
 
 
     }
+
+
+    public void NewWave(int objectiveNum) {
+
+        // {Survive,Hotzone1,Hotzone2,Hotzone3,Hotzone4,Hotzone5}
+
+        if (objectiveNum == 0) { hotzoneRoot.DeactivateHotzones(); }
+        else
+        {
+            hotzoneRoot.ActivateHotzone(objectiveNum - 1);
+
+        }
+
+
+    }
+
 
     public void ZoneDeath(string deadZone) {
 

@@ -74,10 +74,20 @@ public class EnemyAI : MonoBehaviour {
 
         switch (currentAI)
         {
+
+            //AI State 0
             case EnemyAI_State.ChasePlayer: {
                     
                     return playerCharacter.transform.position;
                 }
+            
+            //AI State 1
+            case EnemyAI_State.Wander:
+                {
+                    return new Vector3(Random.Range(Xmapbounds.x, Xmapbounds.y), Random.Range(Ymapbounds.x, Ymapbounds.y), 0);
+                }
+            
+            //AI State 2
             case EnemyAI_State.MoveToObjective: {
 
                     if (playerController.hotzone)
@@ -86,17 +96,22 @@ public class EnemyAI : MonoBehaviour {
                     }
                     else
                     {
-                        currentAI = EnemyAI_State[Random.Range(0, 1)];
+                        currentAI = (EnemyAI_State)(Random.Range(0, 2)); //changes AIstate to Chase or Wander
 
+                        return transform.position; // current position for this frame
 
                     }
                     
                 }
 
-            case EnemyAI_State.Wander:
-                {
-                    return new Vector3(Random.Range(Xmapbounds.x,Xmapbounds.y),Random.Range(Ymapbounds.x,Ymapbounds.y),0);
+            case EnemyAI_State.ShootPlayer: {
+
+
+                    return transform.position; //stay still
                 }
+
+
+
 
             default:
                 {

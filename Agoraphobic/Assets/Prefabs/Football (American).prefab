@@ -25,6 +25,7 @@ GameObject:
   - 114: {fileID: 114000012919302464}
   - 114: {fileID: 114000010331642232}
   - 95: {fileID: 95000014003600792}
+  - 114: {fileID: 114000014282321226}
   m_Layer: 11
   m_Name: Football (American)
   m_TagString: Enemy
@@ -104,11 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48a563c8787af047a3ab6fc68f37e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentAI: 2
+  currentAI: 1
   myRigid: {fileID: 0}
   playerController: {fileID: 0}
   playerCharacter: {fileID: 0}
-  speed: 0
+  speed: 2
   Xmapbounds: {x: -6, y: 9}
   Ymapbounds: {x: -4, y: 4}
   targetPosition: {x: 0, y: 0, z: 0}
@@ -129,6 +130,24 @@ MonoBehaviour:
   currentHealth: 0
   damageReduction: 0
   meleeDamage: 1
+--- !u!114 &114000014282321226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012926190626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd74ad10a166014fa6718b5d145cc4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPlayer: {fileID: 0}
+  EnemyProjectile: {fileID: 1000011905689510, guid: 65a836c3fde3a024bbbf5c9e313a4509,
+    type: 2}
+  myTarget: {x: 0, y: 0, z: 0}
+  fireDelaySeconds: 1
+  fireTimer: 0
+  shotForce: 150
 --- !u!212 &212000014281884092
 SpriteRenderer:
   m_ObjectHideFlags: 1
