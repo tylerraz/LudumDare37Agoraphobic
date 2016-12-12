@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -7,12 +8,18 @@ public class PlayerHealth : MonoBehaviour {
     public float maxHealth;
     public float currentHealth;
     public GameObject Player;
-
+    public Text healthText;
 
     private void Start()
     {
 
-        currentHealth = maxHealth;
+    }
+
+    public void Initialize(float maxH)
+    {
+        maxHealth = maxH;
+        currentHealth = maxH;
+        DisplayHealth();
 
     }
 
@@ -20,7 +27,7 @@ public class PlayerHealth : MonoBehaviour {
     public void ReceiveDamage(float damage)
     {
         currentHealth -= damage;
-        
+        DisplayHealth();
         if (currentHealth<= 0.0f)
         {
             die();
@@ -31,9 +38,10 @@ public class PlayerHealth : MonoBehaviour {
     public void GainHealth(float health)
     {
         currentHealth += health;
+        
 
         if (currentHealth > maxHealth) { currentHealth = maxHealth; }
-
+        DisplayHealth();
     }
 
 
@@ -45,6 +53,12 @@ public class PlayerHealth : MonoBehaviour {
     }
 
 	
-	
+	public void DisplayHealth(){
+
+        string display = currentHealth.ToString() + "/" + maxHealth.ToString();
+        healthText.text = display;
+
+    }
+
 
 }

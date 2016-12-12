@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class HotZoneController : MonoBehaviour {
 
@@ -7,6 +8,9 @@ public class HotZoneController : MonoBehaviour {
     public PlayerController myPlayer;
     public WaveController myWave;
     public SingleHotzone[] Hotzones;
+
+    public Text hotZoneText;
+    public Text hotZonePercentText;
 
     public float hotZoneMaxhealth;
     public float hotZoneHealPoints;
@@ -36,6 +40,7 @@ public class HotZoneController : MonoBehaviour {
 
         Hotzones[zone].gameObject.SetActive(true);
         myPlayer.hotzone = Hotzones[zone];
+        UpdateHotZoneText(Hotzones[zone].zoneName);
 
         
     }
@@ -49,6 +54,7 @@ public class HotZoneController : MonoBehaviour {
         }
 
         myPlayer.hotzone = null;
+        UpdateHotZoneText("None");
 
     }
 
@@ -58,6 +64,21 @@ public class HotZoneController : MonoBehaviour {
 
     }
 
+    private void UpdateHotZoneText(string hzName) {
+                
+        hotZoneText.text = hzName;
+        if (hzName == "None") {
+            hotZonePercentText.enabled = false;
+        }
+        
+    }
+
+    public void UpdateHotzonePercentage(float percentage) {
+
+        hotZonePercentText.enabled = true;
+        hotZonePercentText.text = Mathf.Round(100*percentage).ToString() + "%";
+
+    }
 
 
 }

@@ -87,11 +87,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48a563c8787af047a3ab6fc68f37e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentAI: 2
+  currentAI: 3
   myRigid: {fileID: 0}
   playerController: {fileID: 0}
   playerCharacter: {fileID: 0}
-  speed: 0
+  speed: 0.1
   Xmapbounds: {x: 0, y: 0}
   Ymapbounds: {x: 0, y: 0}
   targetPosition: {x: 0, y: 0, z: 0}

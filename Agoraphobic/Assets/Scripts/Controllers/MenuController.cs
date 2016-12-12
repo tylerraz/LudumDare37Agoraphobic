@@ -17,6 +17,8 @@ public class MenuController : MonoBehaviour {
     {
 
         myDataController = FindObjectOfType<DataController>();
+        musicAudio = myDataController.GetComponent<AudioSource>();
+            
 
     }
 
@@ -67,7 +69,7 @@ public class MenuController : MonoBehaviour {
     public void MusicVolumeChanged(float f)
     {
         myDataController.musicVolume = f;
-        musicAudio.volume = f;
+        musicAudio.volume= f;
 
     }
 

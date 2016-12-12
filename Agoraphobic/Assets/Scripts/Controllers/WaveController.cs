@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 
 public class WaveController : MonoBehaviour {
 
@@ -12,6 +12,8 @@ public class WaveController : MonoBehaviour {
     public int waveNumber;
     public int spawnNumber;
     public float timer;
+    public Text WaveNumberText;
+
 
     private void Start()
     {
@@ -83,6 +85,13 @@ public class WaveController : MonoBehaviour {
         myPlayer.NewWave(i);
         
         
+
+    }
+
+    private void UpdateWaveText()
+    {
+        WaveNumberText.text = waveNumber.ToString();
+
 
     }
 

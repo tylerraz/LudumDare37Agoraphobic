@@ -5,6 +5,7 @@ public class SingleHotzone : MonoBehaviour {
 
     public string zoneName;
     public float zoneHealth;
+    public float zoneMaxHealth;
     public PlayerController myPlayer;
     public GameObject other;
     public HotZoneController hzRoot;
@@ -16,10 +17,11 @@ public class SingleHotzone : MonoBehaviour {
 
         hzRoot = GetComponentInParent<HotZoneController>();
 
+        zoneMaxHealth = hzRoot.hotZoneMaxhealth;
         zoneHealth = hzRoot.hotZoneMaxhealth;
         healRate = hzRoot.hotZoneHealPoints;
-        
-	}
+        hzRoot.UpdateHotzonePercentage(zoneHealth / zoneMaxHealth);
+    }
 
 
     private void OnEnable()
@@ -28,6 +30,8 @@ public class SingleHotzone : MonoBehaviour {
         if (hzRoot == null) { hzRoot = GetComponentInParent<HotZoneController>(); }
         zoneHealth = Mathf.Min(zoneHealth + healRate, hzRoot.hotZoneMaxhealth);
 
+        //UpdateGui
+        hzRoot.UpdateHotzonePercentage(zoneHealth / zoneMaxHealth);
 
     }
 
@@ -56,11 +60,16 @@ public class SingleHotzone : MonoBehaviour {
     private void takeZoneDamage(float dmg) {
 
         zoneHealth -= dmg;
+        //Update GUI
+        hzRoot.UpdateHotzonePercentage(zoneHealth / zoneMaxHealth);
 
         if (zoneHealth <= 0.0f)
         {
             myPlayer.ZoneDeath(zoneName);
         }
+
+
+
 
 
     }

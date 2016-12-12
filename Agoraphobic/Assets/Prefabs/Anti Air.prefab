@@ -91,7 +91,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61000010385762524
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -154,10 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPlayer: {fileID: 0}
-  EnemyProjectile: {fileID: 1000012458333014, guid: a1ffdf37507931f48af1713c4434888f,
+  EnemyProjectile: {fileID: 1000013510613988, guid: b2bd27790c39d9d41bedac940a45c527,
     type: 2}
   myTarget: {x: 0, y: 0, z: 0}
-  fireDelaySeconds: 1.5
+  fireDelaySeconds: 0.75
   fireTimer: 0
   shotForce: 200
 --- !u!212 &212000012778016778

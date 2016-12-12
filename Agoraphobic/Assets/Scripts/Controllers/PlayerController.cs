@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour {
         projectilePrefab = chosen.projectile;
 
         characterSpeed = chosen.moveSpeed;
-        character.GetComponent<PlayerHealth>().maxHealth = chosen.maxHealth;
+        character.GetComponent<PlayerHealth>().Initialize(chosen.maxHealth);
 
 
 
