@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afae25557c3b1841854dded4550672f, type: 3}
+  m_Name: Male_1
+  m_EditorClassIdentifier: 
+  IntroText: I have everything I need in here.
+  CompletionText: Yes, everything.
+  FailText: Except meaning.
+  SpawnList:
+  - time: 1
+    SpawnItem: {fileID: 1000010348505014, guid: 06638bc07a8f35940926bcd60cc6bb69,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: c0f8fbd2aea9e004d9727bce7e17dd1f, type: 2}
+  - time: 3
+    SpawnItem: {fileID: 1000010348505014, guid: 06638bc07a8f35940926bcd60cc6bb69,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 6a1bddc3c779bab4fbc2923c203da1cc, type: 2}
+  - time: 4
+    SpawnItem: {fileID: 1000012926190626, guid: d8aa134bb88af8746b369cc42567bc74,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: c8a4b1b7312b93345ad6a9420ddd62a0, type: 2}
+  - time: 6
+    SpawnItem: {fileID: 1000010918694954, guid: fd25eadff57ca0947ae7e2575acad7c8,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 4504c05174fbcff48bfab2a84a33cb6a, type: 2}
+  - time: 7
+    SpawnItem: {fileID: 1000010348505014, guid: 06638bc07a8f35940926bcd60cc6bb69,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 1dca2821deb16d04db283d4aa5977b84, type: 2}
+  - time: 8
+    SpawnItem: {fileID: 1000012038240592, guid: 95e517097a97e754baa6c9e3c7c1ea57,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 4504c05174fbcff48bfab2a84a33cb6a, type: 2}
+  - time: 12
+    SpawnItem: {fileID: 1000012804260142, guid: 5bf490fde2390e14796d521c8a15b50d,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: d5398ad6ac949aa408ed2e718d0d6283, type: 2}
+  - time: 15
+    SpawnItem: {fileID: 1000010696535140, guid: b59e0771cf2de5747b6238ce9fb65fb3,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 1dca2821deb16d04db283d4aa5977b84, type: 2}

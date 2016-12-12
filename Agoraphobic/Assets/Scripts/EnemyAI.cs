@@ -29,7 +29,11 @@ public class EnemyAI : MonoBehaviour {
         targetPosition = transform.position; //won't move by default
         moving = true;
 
-        StartCoroutine("MovementLoop");
+        //don't bother moving if speed is zero
+        if(speed != 0.0f) {
+            StartCoroutine("MovementLoop");
+        }
+        
 	
 	}
 
@@ -41,6 +45,7 @@ public class EnemyAI : MonoBehaviour {
         float delay = 0.5f;
         if (currentAI == EnemyAI_State.Wander) { delay = 2.0f; } //longer delay if random
 
+        
 
         while (moving) { 
         targetPosition = ChooseMoveTarget();
@@ -64,6 +69,7 @@ public class EnemyAI : MonoBehaviour {
         myRigid.MovePosition(transform.position+moveVector);
     }
 
+
     public Vector3 ChooseMoveTarget() {
 
         switch (currentAI)
@@ -74,7 +80,17 @@ public class EnemyAI : MonoBehaviour {
                 }
             case EnemyAI_State.MoveToObjective: {
 
-                    return transform.position;
+                    if (playerController.hotzone)
+                    {
+                        return playerController.hotzone.transform.position;
+                    }
+                    else
+                    {
+                        currentAI = EnemyAI_State[Random.Range(0, 1)];
+
+
+                    }
+                    
                 }
 
             case EnemyAI_State.Wander:

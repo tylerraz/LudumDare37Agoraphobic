@@ -22,9 +22,11 @@ GameObject:
   - 212: {fileID: 212000010391878986}
   - 114: {fileID: 114000013461764468}
   - 58: {fileID: 58000011310343828}
-  m_Layer: 0
+  - 50: {fileID: 50000010447731148}
+  - 114: {fileID: 114000013304801044}
+  m_Layer: 11
   m_Name: Devil Baby
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,6 +44,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &50000010447731148
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012473362540}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58000011310343828
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -51,11 +70,32 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -0.06}
   serializedVersion: 2
   m_Radius: 0.4063412
+--- !u!114 &114000013304801044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012473362540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48a563c8787af047a3ab6fc68f37e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAI: 2
+  myRigid: {fileID: 0}
+  playerController: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  speed: 0
+  Xmapbounds: {x: 0, y: 0}
+  Ymapbounds: {x: 0, y: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  moveVector: {x: 0, y: 0, z: 0}
+  moving: 0
 --- !u!114 &114000013461764468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,7 +139,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 6b6e89a22c4dd9a4eb0dbfad7e5bc7e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

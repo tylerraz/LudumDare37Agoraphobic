@@ -38,9 +38,11 @@ GameObject:
   - 212: {fileID: 212000012972773280}
   - 61: {fileID: 61000010385762524}
   - 114: {fileID: 114000011893866806}
-  m_Layer: 0
+  - 114: {fileID: 114000011877795920}
+  - 50: {fileID: 50000012173334392}
+  m_Layer: 11
   m_Name: Anti Air
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,13 +67,30 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013339094506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3958435, y: 1.3648224, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012436729036}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &50000012173334392
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013339094506}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61000010385762524
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -86,6 +105,27 @@ BoxCollider2D:
   m_Offset: {x: 0.061732292, y: -0.16461945}
   serializedVersion: 2
   m_Size: {x: 1.0232021, y: 0.8290944}
+--- !u!114 &114000011877795920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013339094506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48a563c8787af047a3ab6fc68f37e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAI: 2
+  myRigid: {fileID: 0}
+  playerController: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  speed: 1
+  Xmapbounds: {x: -9, y: 6}
+  Ymapbounds: {x: -4, y: 4}
+  targetPosition: {x: 0, y: 0, z: 0}
+  moveVector: {x: 0, y: 0, z: 0}
+  moving: 0
 --- !u!114 &114000011893866806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +140,7 @@ MonoBehaviour:
   healthMax: 150
   currentHealth: 0
   damageReduction: 5
-  meleeDamage: 1
+  meleeDamage: 5
 --- !u!212 &212000012778016778
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -162,7 +202,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 1c496f16afa24c84dbf52643e26b726e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

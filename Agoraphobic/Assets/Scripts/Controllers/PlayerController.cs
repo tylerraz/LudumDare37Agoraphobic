@@ -37,8 +37,9 @@ public class PlayerController : MonoBehaviour {
     public Vector2 movement;
     private Rigidbody2D rigid;
 
-    
-    
+    //Game systems linkage
+    public GameObject hotzone;
+    public bool hotzoneAlive;
     
     
     
@@ -62,9 +63,13 @@ public class PlayerController : MonoBehaviour {
         
 
         chosen = characterChoices[gender];
+
+        //enable helicopter sound
         if (gender == 2) {
             character.GetComponent<AudioSource>().Play();
         }
+
+
 
         character.GetComponent<SpriteRenderer>().sprite = chosen.gameSprite;
 
@@ -160,8 +165,17 @@ public class PlayerController : MonoBehaviour {
 
     }
 
+    public void ZoneDeath(string deadZone) {
+
+        Debug.Log("FailedToProtect " + deadZone);
+        GameOver();
+    }
+
+
+
 
     public void GameOver() {
+
 
 
     }

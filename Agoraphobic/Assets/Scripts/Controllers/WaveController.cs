@@ -7,6 +7,7 @@ public class WaveController : MonoBehaviour {
 
     public WaveData[] GameWaves;
 
+    public PlayerController myPlayer;
     public int waveNumber;
     public int spawnNumber;
     public float timer;
@@ -48,7 +49,13 @@ public class WaveController : MonoBehaviour {
                 //after time is up, create the new enemy
                 Vector3 entrance = new Vector3(nextSpawn.entrancePoint.position.x, nextSpawn.entrancePoint.position.y, 0.0f);
 
-                GameObject Enemy = Instantiate(nextSpawn.SpawnItem, entrance, Quaternion.identity) as GameObject;
+                GameObject spawn = Instantiate(nextSpawn.SpawnItem, entrance, Quaternion.identity) as GameObject;
+                Debug.Log(spawn.layer);
+
+                if (spawn.layer == 11)
+                {
+                    spawn.GetComponent<EnemyAI>().playerController = myPlayer;
+                }
 
                 spawnNumber++;
                 
