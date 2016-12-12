@@ -5,8 +5,13 @@ public class EnemyProjectile : MonoBehaviour
 {
 
     public MissileController myMissle;
-    public AudioSource splatClip; //on death play this
+    public SFX splat; //on death play this
     public GameObject other;
+
+    private void Start()
+    {
+        splat = GetComponent<SFX>();
+    }
 
 
     //Enemy Projectiles will collide with static terrain, allowing the player to find cover
@@ -19,10 +24,10 @@ public class EnemyProjectile : MonoBehaviour
         {
             other.GetComponent<PlayerHealth>().ReceiveDamage(myMissle.damage);
 
-            if (splatClip)
-            {
-                splatClip.Play();
-            }
+            //soundeffect
+            if (splat) {splat.PlaySoundEffect(); }
+            
+            
 
         }
 

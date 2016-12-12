@@ -17,3 +17,7 @@ MonoBehaviour:
   maxHealth: 150
   moveSpeed: 20
   fireRate: 5
+  victoryParagraph: As the last invader dies at your feet, you realize that everything
+    outside is actually dangerous. If you stay inside any longer, the world will crumble.
+    Only you, beautiful Apache, with 30mm cannons and AGM-114 Hellfire missiles, can
+    stop the evil that lives in the outside.

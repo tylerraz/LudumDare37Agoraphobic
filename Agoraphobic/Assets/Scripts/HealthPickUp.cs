@@ -6,12 +6,12 @@ public class HealthPickUp : MonoBehaviour {
 
     public float healthValue;
     public GameObject otherObject;
-    public AudioSource myAudio;
+    public SFX mySound;
 
 
     private void Start()
     {
-        myAudio = GetComponent<AudioSource>();
+        mySound = GetComponent<SFX>();
 
             }
 
@@ -23,7 +23,7 @@ public class HealthPickUp : MonoBehaviour {
 
         PlayerHealth PlayerHealth = otherObject.GetComponent<PlayerHealth>();
         PlayerHealth.GainHealth(healthValue);
-        myAudio.Play();
+        mySound.PlaySoundEffect();
 
         Destroy(gameObject,.25f);
 

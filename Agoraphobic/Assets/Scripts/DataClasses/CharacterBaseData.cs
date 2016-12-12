@@ -12,6 +12,7 @@ public class CharacterBaseData : ScriptableObject {
     public float moveSpeed;
     public float fireRate;
 
+    public string victoryParagraph;
 
 
 

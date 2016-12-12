@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class PlayerController : MonoBehaviour {
@@ -41,6 +43,16 @@ public class PlayerController : MonoBehaviour {
     public HotZoneController hotzoneRoot;
     public SingleHotzone hotzone;
     public bool hotzoneAlive;
+    public SpeechBubbles speechSystem;
+    public WaveController myWaves;
+
+    //GUI Links
+
+    public GameObject VictoryScreen;
+    public GameObject GameOverScreen;
+    public Text VictoryMessage;
+    public Text GameOverMessage;
+    public Text GameOverReason;
     
     
     
@@ -175,7 +187,7 @@ public class PlayerController : MonoBehaviour {
         else
         {
             hotzoneRoot.ActivateHotzone(objectiveNum - 1);
-
+            speechSystem.CreateSpeechBubble("Protect Me!", objectiveNum-1);
         }
 
 
@@ -185,18 +197,31 @@ public class PlayerController : MonoBehaviour {
     public void ZoneDeath(string deadZone) {
 
         Debug.Log("FailedToProtect " + deadZone);
-        GameOver();
+        GameOver("Failed To Protect " + deadZone);
     }
 
 
+    public void Victory() {
 
+        VictoryScreen.SetActive(true);
+        VictoryMessage.text = chosen.victoryParagraph;
 
-    public void GameOver() {
+    }
 
+    public void GameOver(string reason) {
+
+        GameOverScreen.SetActive(true);
+        GameOverReason.text = reason;
+        GameOverMessage.text = myWaves.currentWave.FailText;
+
+    }
+
+    public void ReturnToMainMenu() {
+
+        SceneManager.LoadScene("MainMenu");
 
 
     }
-    
 
 
 

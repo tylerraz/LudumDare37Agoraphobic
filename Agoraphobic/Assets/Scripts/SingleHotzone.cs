@@ -3,14 +3,19 @@ using System.Collections;
 
 public class SingleHotzone : MonoBehaviour {
 
+
     public string zoneName;
     public float zoneHealth;
     public float zoneMaxHealth;
+    public float healRate;
+
+
+    //Systems links
     public PlayerController myPlayer;
     public GameObject other;
     public HotZoneController hzRoot;
 
-    public float healRate;
+    //public Transform speechRoot; //set in inspector, used to determine where speech bubble appears
     
     // Use this for initialization
 	void Start () {

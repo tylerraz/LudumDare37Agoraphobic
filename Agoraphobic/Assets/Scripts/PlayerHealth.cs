@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour {
 
     public void die()
     {
-        Player.GetComponent<PlayerController>().GameOver();
+        Player.GetComponent<PlayerController>().GameOver("You died!");
 
     }
 

@@ -17,3 +17,7 @@ MonoBehaviour:
   maxHealth: 80
   moveSpeed: 30
   fireRate: 3
+  victoryParagraph: As the last invader dies at your feet, you realize that all of
+    the things you were afraid of couldn't really hurt you. You aren't defined by
+    the man you marry, or how many babies you push out, or even how pretty you are.  You
+    just have to be... YOURSELF!

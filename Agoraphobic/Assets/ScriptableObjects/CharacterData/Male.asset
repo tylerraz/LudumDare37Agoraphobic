@@ -17,3 +17,7 @@ MonoBehaviour:
   maxHealth: 120
   moveSpeed: 15
   fireRate: 4
+  victoryParagraph: As the last invader dies at your feet, you realize that all of
+    the things you were afraid of couldn't really hurt you. You didn't need to be
+    a slick suited businessman, or a superstar athlete or even a handy repairman.  You
+    just had to be...  YOURSELF!

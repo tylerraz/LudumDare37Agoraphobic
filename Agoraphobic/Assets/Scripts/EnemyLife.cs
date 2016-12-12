@@ -25,7 +25,7 @@ public class EnemyLife : MonoBehaviour {
     public void Die() {
 
 
-
+        FindObjectOfType<WaveController>().EnemyDied(gameObject);
         Destroy(gameObject, .25f);
 
     }
