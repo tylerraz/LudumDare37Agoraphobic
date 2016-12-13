@@ -18,6 +18,7 @@ On the windows build it looks best at 800*600. The build on itch.io has some GUI
 
 Programming/Content Design:
 Tyler Rasmussen
+
 Art/Music Design:
 Alan Molina
 
