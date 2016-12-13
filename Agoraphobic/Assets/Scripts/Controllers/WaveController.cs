@@ -7,7 +7,10 @@ public class WaveController : MonoBehaviour {
 
 
 
+    public GameWaves[] StoryWaves;
     public WaveData[] GameWaves;
+
+
 
     public PlayerController myPlayer;
     public int waveNumber;
@@ -30,6 +33,12 @@ public class WaveController : MonoBehaviour {
         spawnNumber = 0;
         timer = 0;
         readyClicked = false;
+
+
+        DataController myData = FindObjectOfType<DataController>();
+
+        //use the gender based selection if the persistant object is loaded, else use the inspector set test data
+        if (myData) { GameWaves = StoryWaves[myData.genderChoice].waves; } 
 
         StartCoroutine("SpawnWave");
     }

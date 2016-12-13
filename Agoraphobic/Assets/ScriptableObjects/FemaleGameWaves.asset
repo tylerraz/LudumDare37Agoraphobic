@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7885c4943189e5049a51ecd9ded87818, type: 3}
+  m_Name: FemaleGameWaves
+  m_EditorClassIdentifier: 
+  myName: FemaleWaves
+  waves:
+  - {fileID: 11400000, guid: 4728aa315e1cd984cb1d26c0c0282295, type: 2}
+  - {fileID: 11400000, guid: 0ef2520ae8f283a4a9bfc7cb1dfd824b, type: 2}
+  - {fileID: 11400000, guid: 7394fde292c63c34b890aa6214cf11d7, type: 2}
+  - {fileID: 11400000, guid: 4ca1b8cd1733a3d45b0861bf83a25da3, type: 2}
+  - {fileID: 11400000, guid: c8c090e639fd85a45839b9be71840713, type: 2}
+  - {fileID: 11400000, guid: d3a020ae5cd9dc145882a074a380260d, type: 2}
+  - {fileID: 11400000, guid: cf1f8c21636b7f84d814db5f35b23a99, type: 2}
+  - {fileID: 11400000, guid: c95b5f7915137aa4c86324dfe0949c46, type: 2}
+  - {fileID: 11400000, guid: 029eab6996d6e6d41bb34235a40aef53, type: 2}
+  - {fileID: 11400000, guid: 4ca1b8cd1733a3d45b0861bf83a25da3, type: 2}
+  - {fileID: 11400000, guid: 0923da412291fe4439cc5a1899619b46, type: 2}
+  - {fileID: 11400000, guid: cf1f8c21636b7f84d814db5f35b23a99, type: 2}
+  - {fileID: 11400000, guid: 4ca1b8cd1733a3d45b0861bf83a25da3, type: 2}
+  - {fileID: 11400000, guid: cf1f8c21636b7f84d814db5f35b23a99, type: 2}
+  - {fileID: 11400000, guid: f6ed6b68b5b174746819839c4a7e2fc8, type: 2}

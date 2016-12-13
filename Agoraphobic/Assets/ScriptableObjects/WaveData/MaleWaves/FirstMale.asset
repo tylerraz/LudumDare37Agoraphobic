@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afae25557c3b1841854dded4550672f, type: 3}
+  m_Name: FirstMale
+  m_EditorClassIdentifier: 
+  IntroText: Evil Lives Outside
+  CompletionText: It's trying to kill me
+  FailText: I will never go outside
+  myObjective: 0
+  SpawnList:
+  - time: 3
+    SpawnItem: {fileID: 1000010101300024, guid: f4d8b91d12b9a8440a3a1fdde9bfb56d,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: d5398ad6ac949aa408ed2e718d0d6283, type: 2}
+  - time: 5
+    SpawnItem: {fileID: 1000010918694954, guid: fd25eadff57ca0947ae7e2575acad7c8,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: c0f8fbd2aea9e004d9727bce7e17dd1f, type: 2}
+  - time: 6
+    SpawnItem: {fileID: 1000010918694954, guid: fd25eadff57ca0947ae7e2575acad7c8,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 4504c05174fbcff48bfab2a84a33cb6a, type: 2}
+  - time: 7
+    SpawnItem: {fileID: 1000012505657418, guid: 72bc1477f96fb2d45a5814a348ec13a8,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: c8a4b1b7312b93345ad6a9420ddd62a0, type: 2}
+  - time: 9
+    SpawnItem: {fileID: 1000010488702218, guid: 45d5a75a67717f44db8ff5c52c742c9b,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 1dca2821deb16d04db283d4aa5977b84, type: 2}
+  - time: 12
+    SpawnItem: {fileID: 1000012505657418, guid: 8fad907ddb343af47af28840f674f3a7,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 6e722b9d2238f734ea56e5f351015380, type: 2}

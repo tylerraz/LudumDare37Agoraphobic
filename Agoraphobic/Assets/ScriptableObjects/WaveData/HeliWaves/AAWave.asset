@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afae25557c3b1841854dded4550672f, type: 3}
+  m_Name: AAWave
+  m_EditorClassIdentifier: 
+  IntroText: Missiles Incoming
+  CompletionText: THWAPTHWAPTHWAP
+  FailText: The skies are no longer safe
+  myObjective: 0
+  SpawnList:
+  - time: 1
+    SpawnItem: {fileID: 1000012038240592, guid: 95e517097a97e754baa6c9e3c7c1ea57,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 4504c05174fbcff48bfab2a84a33cb6a, type: 2}
+  - time: 2
+    SpawnItem: {fileID: 1000013339094506, guid: e9534672d7c102d45824921547756800,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 6e722b9d2238f734ea56e5f351015380, type: 2}
+  - time: 3
+    SpawnItem: {fileID: 1000013339094506, guid: e9534672d7c102d45824921547756800,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 253c725150638ca42907e0456bfe4fe7, type: 2}
+  - time: 6.5
+    SpawnItem: {fileID: 1000013339094506, guid: e9534672d7c102d45824921547756800,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 4504c05174fbcff48bfab2a84a33cb6a, type: 2}
+  - time: 6.75
+    SpawnItem: {fileID: 1000013339094506, guid: e9534672d7c102d45824921547756800,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: 1dca2821deb16d04db283d4aa5977b84, type: 2}
+  - time: 7
+    SpawnItem: {fileID: 1000013339094506, guid: e9534672d7c102d45824921547756800,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: c8a4b1b7312b93345ad6a9420ddd62a0, type: 2}
+  - time: 9
+    SpawnItem: {fileID: 1000013339094506, guid: e9534672d7c102d45824921547756800,
+      type: 2}
+    entrancePoint: {fileID: 11400000, guid: c0f8fbd2aea9e004d9727bce7e17dd1f, type: 2}

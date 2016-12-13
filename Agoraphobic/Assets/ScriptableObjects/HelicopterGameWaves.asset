@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7885c4943189e5049a51ecd9ded87818, type: 3}
+  m_Name: HelicopterGameWaves
+  m_EditorClassIdentifier: 
+  myName: Helicopter
+  waves:
+  - {fileID: 11400000, guid: 04d9edd49a495c7408f2156db7f15ffb, type: 2}
+  - {fileID: 11400000, guid: c5afef2c35f2f3a4a891ebbdde20c9d6, type: 2}
+  - {fileID: 11400000, guid: dbee81a748791694387899f6fb6e2748, type: 2}
+  - {fileID: 11400000, guid: 0923da412291fe4439cc5a1899619b46, type: 2}
+  - {fileID: 11400000, guid: dbee81a748791694387899f6fb6e2748, type: 2}
+  - {fileID: 11400000, guid: 04d9edd49a495c7408f2156db7f15ffb, type: 2}
+  - {fileID: 11400000, guid: cf1f8c21636b7f84d814db5f35b23a99, type: 2}
+  - {fileID: 11400000, guid: e38a663c885586942a8d8e4f750d2997, type: 2}
+  - {fileID: 11400000, guid: e38a663c885586942a8d8e4f750d2997, type: 2}
+  - {fileID: 11400000, guid: dbee81a748791694387899f6fb6e2748, type: 2}
+  - {fileID: 11400000, guid: 7394fde292c63c34b890aa6214cf11d7, type: 2}
+  - {fileID: 11400000, guid: e38a663c885586942a8d8e4f750d2997, type: 2}
+  - {fileID: 11400000, guid: dbee81a748791694387899f6fb6e2748, type: 2}
+  - {fileID: 11400000, guid: c8c090e639fd85a45839b9be71840713, type: 2}
+  - {fileID: 11400000, guid: 0923da412291fe4439cc5a1899619b46, type: 2}
