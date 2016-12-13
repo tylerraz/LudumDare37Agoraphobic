@@ -25,11 +25,17 @@ Alan Molina
 Major TODOs
 
 Visual/Sound feedback on hit
+
 Brief period of Invulnerabilty after getting hit
+
 Fix GUI layouts, especially for WEBGL build
 
 Spawn system refactor:
+
 Changes spawn points to be game objects anchored to the floor instead of just vector2s
+
 Abstract the wavedata class to allow random waves
+
 Abstract the spawn event class to allow multiple spawns at the same time
+
 Overall make it easier to create new waves
