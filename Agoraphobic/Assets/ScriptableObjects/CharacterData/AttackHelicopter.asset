@@ -14,8 +14,8 @@ MonoBehaviour:
   characterName: AttackHelicopter
   gameSprite: {fileID: 21300000, guid: c638c4bc77ae4394fa608d06ce4cfba5, type: 3}
   projectile: {fileID: 1000014202214982, guid: 172d78e341d5f01419a3cfb28ce645a4, type: 2}
-  maxHealth: 150
-  moveSpeed: 20
+  maxHealth: 250
+  moveSpeed: 50
   fireRate: 5
   victoryParagraph: As the last invader dies at your feet, you realize that everything
     outside is actually dangerous. If you stay inside any longer, the world will crumble.

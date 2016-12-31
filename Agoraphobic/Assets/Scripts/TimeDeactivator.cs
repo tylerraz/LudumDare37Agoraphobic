@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TimeDestroyer : MonoBehaviour {
+public class TimeDeactivator : MonoBehaviour {
 
     public float timer;
     public float lifetime;

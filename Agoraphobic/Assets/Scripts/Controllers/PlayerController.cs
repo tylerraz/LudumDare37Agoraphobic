@@ -113,42 +113,53 @@ public class PlayerController : MonoBehaviour {
 	
     
     
-    // Gets Input
+    // Gets Input for firing
 	void Update () {
-
-
 
         //fire code
         firingTimer -= Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0) &&firingTimer <0.0f) {
+        if (Input.GetMouseButtonDown(0) && firingTimer < 0.0f)
+        {
 
             firingTimer = firingDelay;
             aim = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             aim.z = 0;
             fireProjectile(aim);
-          
+
         }
 
-        //movement code; first reset movement
-        movement.x = 0;
-        movement.y = 0;
-
-        //sets input vector for FixedUpdate
-        movement.x = Input.GetAxis("Horizontal");
-        movement.y = Input.GetAxis("Vertical");
-        
     }
 
 
     //handles movement
     private void FixedUpdate()
     {
-        if (movement.x != 0.0f || movement.y != 0.0f)
-        {
-            rigid.MovePosition(rigid.position + movement * characterSpeed * Time.fixedDeltaTime);
 
-        }
+
+
+        //movement code; first reset movement
+        movement.x = 0;
+        movement.y = 0;
+
+        //sets input vector
+        movement.x = Input.GetAxis("Horizontal");
+        movement.y = Input.GetAxis("Vertical");
+
+        
+
+
+            movement = movement.normalized; //so moving diagonal isn't faster
+
+            movement *= characterSpeed;
+
+            rigid.AddForce(movement);
+
+            //character.transform.Translate(movement.x, movement.y,0); //this just warps the guy around, thru colliders
+
+            //rigid.MovePosition(rigid.position + movement); //"slippery"
+
+        
 
 
     }

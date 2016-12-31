@@ -14,9 +14,9 @@ MonoBehaviour:
   characterName: Female
   gameSprite: {fileID: 21300000, guid: d0635831615e4c74388fe9191264cabc, type: 3}
   projectile: {fileID: 1000010882919984, guid: b158341ee4ed08f4b9e3db60c68341f2, type: 2}
-  maxHealth: 80
-  moveSpeed: 30
-  fireRate: 3
+  maxHealth: 100
+  moveSpeed: 60
+  fireRate: 5
   victoryParagraph: As the last invader dies at your feet, you realize that all of
     the things you were afraid of couldn't really hurt you. You aren't defined by
     the man you marry, or how many babies you push out, or even how pretty you are.  You

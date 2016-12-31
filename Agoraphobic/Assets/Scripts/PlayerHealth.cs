@@ -10,9 +10,21 @@ public class PlayerHealth : MonoBehaviour {
     public GameObject Player;
     public Text healthText;
 
+    [SerializeField]
+    private bool invulnerable;
+    [SerializeField]
+    private float invulnTime;
+
+    [SerializeField]
+    private Animator myAnimator;
+
+
     private void Start()
     {
-
+        invulnerable = false;
+        myAnimator = GetComponent<Animator>();
+        myAnimator.SetBool("Invulnerable", false);
+        
     }
 
     public void Initialize(float maxH)
@@ -23,16 +35,35 @@ public class PlayerHealth : MonoBehaviour {
 
     }
 
-    //used by enemies
+    //called by enemies
     public void ReceiveDamage(float damage)
     {
+
+        if(invulnerable) { return; }
+
         currentHealth -= damage;
         DisplayHealth();
+
+        invulnerable = true;
+        myAnimator.SetBool("Invulnerable", true);
+        StartCoroutine(Invulnerability());
+
         if (currentHealth<= 0.0f)
         {
-            die();
+            Die();
         }
     }
+
+    private IEnumerator Invulnerability() {
+
+        
+        yield return new WaitForSeconds(invulnTime);
+
+        invulnerable = false;
+        myAnimator.SetBool("Invulnerable", false);
+    }
+
+
 
     //used by powerups
     public void GainHealth(float health)
@@ -46,7 +77,7 @@ public class PlayerHealth : MonoBehaviour {
 
 
 
-    public void die()
+    private void Die()
     {
         Player.GetComponent<PlayerController>().GameOver("You died!");
 

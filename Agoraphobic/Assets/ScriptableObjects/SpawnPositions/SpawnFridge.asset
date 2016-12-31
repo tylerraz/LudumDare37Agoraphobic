@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c417e3b4dba84714c895cef365c8023a, type: 3}
   m_Name: SpawnFridge
   m_EditorClassIdentifier: 
-  position: {x: 4.15, y: 1.2}
+  position: {x: 3.3, y: 1.6}

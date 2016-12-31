@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c417e3b4dba84714c895cef365c8023a, type: 3}
   m_Name: SpawnByDesk
   m_EditorClassIdentifier: 
-  position: {x: -4.45, y: -3.6}
+  position: {x: -5.8, y: -1.4}

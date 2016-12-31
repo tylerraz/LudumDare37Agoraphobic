@@ -13,14 +13,19 @@ public class DataController : MonoBehaviour {
     public float musicVolume;
     public float effectsVolume;
 
+    private static bool created = false;
     
 	void Start () {
+
+        if(created)
+        { Destroy(gameObject); }
 
         genderChoice = 0;
         musicVolume = .5f;
         effectsVolume = .5f;
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene("MainMenu");
+
+        created = true;
 
 	}
 	

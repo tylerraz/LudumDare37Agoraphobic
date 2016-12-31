@@ -57,7 +57,7 @@ MonoBehaviour:
       type: 2}
     entrancePoint: {fileID: 11400000, guid: d5398ad6ac949aa408ed2e718d0d6283, type: 2}
   - time: 11
-    SpawnItem: {fileID: 1000011905689510, guid: 65a836c3fde3a024bbbf5c9e313a4509,
+    SpawnItem: {fileID: 1000012926190626, guid: d8aa134bb88af8746b369cc42567bc74,
       type: 2}
     entrancePoint: {fileID: 11400000, guid: d5398ad6ac949aa408ed2e718d0d6283, type: 2}
   - time: 13
